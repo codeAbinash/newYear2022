@@ -29,7 +29,7 @@ font-family: 'Patrick Hand', cursive;*/
     overflow: scroll;
     transition: 0.5s linear top;
     text-align: center;
-    display: none;
+    /* display: none; */
 }
 .welcome img{
     width: 100%;
