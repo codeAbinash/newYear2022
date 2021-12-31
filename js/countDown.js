@@ -10,6 +10,7 @@ function showCountDown(){
     if(ms<0){
         countDown.innerHTML = "I said that 365 days ago, but a happy new year.";
         document.getElementById("adv").remove();
+        tickMusic.pause();
     }else{
         countDown.innerHTML = getDateFromMs(ms);
     }
