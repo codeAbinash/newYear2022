@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&family=Patrick+Hand&display=swap');
+/*font-family: 'Comfortaa', cursive;
+font-family: 'Patrick Hand', cursive;*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Pushster&display=swap');
+/*font-family: 'Pushster', cursive;*/
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
+}
+.welcome{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background-color: #f5eced;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 30px; */
+    overflow: scroll;
+    transition: 0.5s linear top;
+    text-align: center;
+    display: none;
+}
+.welcome img{
+    width: 100%;
+}
+.welcome button{
+    border: none;
+    padding: 17px;
+    border-radius: 3px;
+    width: calc(100% - 2 * 25px);
+    font-size: 1.1em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+    background-color: #d20000;
+    margin: 0 25px 25px 25px;
+}
+
+.newYearHeading,
+.newYearHeadingExtra,
+.friendName,
+.wishFrom{
+    font-family: 'Pushster', cursive;
+    text-align: center;
+    font-size: 2.7em;
+    /* margin-top: 40px; */
+    font-weight: normal;
+    color: white;
+    background-image: url("images/bg1.jpg");
+    background-size: contain;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.friendName{
+    margin-top: 30PX;
+}
+.newYearHeadingExtra{
+    margin-top: 0;
+}
+
+.clocks{
+    margin-bottom: 50px;
+}
+.clocks .top{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.clocks .top .clock{
+    width: 60vw;
+    height: 60vw;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    box-shadow: inset 10px 10px 10px rgba(0,0,0,0.05),
+        15px 24px 24px rgba(0,0,0,0.05),
+        15px 20px 20px rgba(0,0,0,0.05),
+        inset -20px -20px 15px rgba(255,255,255,0.9);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.clocks .top .clock::before{
+    content: "";
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-top: -20%;
+    margin-left: -35%;
+    filter: brightness(500%);
+    position: absolute;
+}
+.clocks .top .clock::after{
+    content: "";
+    height: 10px;
+    width: 10px;
+    background-color: #fff;
+    /* margin-top: 50px; */
+    border-radius: 50%;
+    margin-top: -5%;
+    margin-left: -40%;
+    filter: brightness(500%);
+    position: absolute;
+}
+.clock>div{
+    height: 50vw;
+    width: 50vw;
+    /* background-color: blueviolet; */
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+.clock .min .mn{
+    height: 17vw;
+    width: 4px;
+    background-color: #444;
+    margin-bottom: 16vw;
+}
+.clock .hour .hr{
+    height: 13vw;
+    width: 4px;
+    background-color: #444;
+    margin-bottom: 12vw;
+}
+.clock .sec .sc{
+    height: 20vw;
+    width: 3px;
+    background-color: #d20000;
+    margin-bottom: 14vw;
+}
+
+.clock>div>div{
+    border-radius: 10px;
+}
+.clock .point{
+    height: 10px;
+    width: 10px;
+    background-color: #d20000;
+    position: absolute;
+    border-radius: 50%;
+}
+
+
+.clocks .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 50px;
+
+}
+.clocks .bottom .clockSmall{
+    width: 20vw;
+    height: 20vw;
+    background-color: #f5f5f5;
+    box-shadow: inset 5px 5px 5px rgba(0,0,0,0.05),
+                5px 8px 8px rgba(0,0,0,0.05),
+                5px 7px 7px rgba(0,0,0,0.05),
+                5px 7px 7px rgba(0,0,0,0.05),
+                inset -10px -10px 7px rgba(255,255,255,0.9);
+
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Pushster', cursive;
+    font-weight: bold;
+    font-size: 2em;
+    color: #444;
+}
+.clocks .bottom .clockSmall::before{
+    content: "";
+    height: 10px;
+    width: 10px;
+    background-color: #ffffffdd;
+    /* margin-top: 50px; */
+    border-radius: 50%;
+    margin-top: -50%;
+    margin-left: -50%;
+}
+.clocks .bottom .clockSmall::after{
+    content: "";
+    height: 7px;
+    width: 7px;
+    background-color: #ffffffdd;
+    /* margin-top: 50px; */
+    border-radius: 50%;
+    margin-top: -27%;
+    margin-left: -40%;
+}
+
+
+.quote{
+    width: 100%;
+    height: auto;
+    padding:0 20px;
+}
+.quote p{
+    font-family: 'Pushster', cursive;
+    font-size: 1.5em;
+    text-align: center;
+    color: #333;
+}
+
+
+
+
+
+
+.bookDiv{
+    margin: 20px auto;
+    width: 250px;
+    height: 350px;
+    background: #fff;
+    transform-style: preserve-3d;
+    transform:perspective(2000px);
+    transition: 1s;
+    box-shadow: inset 300px 0 50px rgba(0,0,0,0.5),
+                2px 2px 15px 1px #ddd;
+  /* box-shadow: 0 0 15px 0px #555; */
+    margin: 15px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 3px;
+    /* z-index: -1; */
+}
+.bookDiv:hover{
+    z-index: 1000;
+    transform: perspective(2000px) rotate(-10deg);
+    box-shadow: inset 20px 0 50px rgba(0,0,0,0.5);
+}
+.bookDiv:hover .book img{
+    transform: rotateY(-135deg);
+    z-index: 2000;
+}
+.bookDiv .book{
+   width: 100%;
+   height: auto;
+   background: red;
+   display: block;
+   margin: auto;
+}
+.bookDiv .book img{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  transform-origin: left;
+  transition: 1s;
+  border-radius: 3px;
+
+}
+
+.bookDiv .book img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.bookDiv .details{
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 25px;
+  z-index: -1;
+  color: #333;
+}
+.bookDiv .details p{
+    font-size: 1.2em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: 'Patrick Hand', cursive;
+    padding-top: 10px;
+}
+.bookDiv .details h2{
+    font-family: 'Pushster', cursive;
+    font-size: 1.7em;
+    letter-spacing: 1px;
+
+}
+.noti{
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.share{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.share a{
+    width: 100%;
+}
+.share a button{
+    width: 100%;
+}
+.share input{
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1em;
+    padding: 15px;
+    border: 1px solid black;
+    outline: none;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    transition: 0.1s linear border;
+}
+.share input:focus{
+    border: 2px solid #d20000;
+}
+.share button{
+    /* font-family: 1em; */
+    background-color: #d20000;
+    padding: 14px;
+    border-radius: 3px;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.2em;
+    color: white;
+    outline: none;
+    border: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.share button:last-child{
+    margin-top: 10px;
+    background-color: #25D366;
+}
+.shareDialouge{
+    font-family: 'Pushster', cursive;
+    margin: 50px 0 0 20px;
+    font-weight: normal;
+    color: white;
+    background-image: url("images/bg1.jpg");
+    background-size: contain;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.by{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.by a{
+    color: dodgerblue;
+    text-decoration: none;
+}
